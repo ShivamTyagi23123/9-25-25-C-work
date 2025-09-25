@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     char s[100];
     int i = 0, words = 0;
     fgets(s, 100, stdin);
@@ -10,5 +11,7 @@ int main() {
         i++;
     }
     printf("%d", words);
+    
     return 0;
 }
+
