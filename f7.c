@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include <string.h>
 
-void count_words() {
-    char s[100]; int i, c=0;
+int main() 
+{
+    char s[100]; int i,v=0,c=0;
     fgets(s,100,stdin);
     for(i=0;s[i];i++)
-        if((s[i]!=' '&&s[i]!='\n')&&((s[i+1]==' '||s[i+1]=='\n'||s[i+1]==0)))
-            c++;
-    printf("%d",c);
-}
-
-int main() {
-    count_words();
+        if((s[i]>='a'&&s[i]<='z')||(s[i]>='A'&&s[i]<='Z'))
+            if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'
+            ||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U') v++;
+            else c++;
+    printf("%d %d",v,c);
+    
     return 0;
 }
